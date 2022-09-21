@@ -1,0 +1,238 @@
+*
+{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #D071F9;
+    padding: 0 10px;
+}
+
+.container
+{
+    max-width:500px;
+    width: 100%;
+    background-color: white;
+    height: 650px;
+    margin:20px auto; 
+    padding: 30px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+.input_{
+    margin: 20px 0px;
+    position: relative;
+  }
+.container .title
+{
+    font-size:24px;
+    color: #D071F9;
+    font-weight:700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+.container .form
+{
+    width: 100%;
+}
+.container .form .input_field
+{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.container .form .input_field label
+{
+     width:200px;
+     margin-right: 10px;
+     font-size:14px;
+
+}
+
+ .input,.textarea
+{
+    width: 100%;
+    outline: none;
+    border: 1px solid #D071F9;
+    font-size: 15px;
+    padding:8px 10px;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+}
+
+.textarea
+{
+    resize:none;
+    height: 70px;
+}
+.custom_select
+{
+    position: relative;
+    width:100%;
+    height:37px;
+}
+.custom_select select
+{
+    -webkit-appearance: none;
+    appearance: none;
+   
+    width:100%;
+    height:100%;
+    padding: 8px 10px;
+    border: 1px solid #D071F9;
+    border-radius: 3px;
+    outline: none;
+
+}
+
+.custom_select::before
+{
+    content:"";
+    position: absolute;
+    top:12px;
+    right:10px;
+    border:8px solid black;
+    border-color: #D071F9 transparent transparent transparent;
+    pointer-events: none;
+}
+
+.input:focus,.textarea:focus,select:focus
+{
+    border:1px solid purple
+}
+.input_field p
+{
+    font-size: 14px;
+    color:#757575;
+
+}
+.container .form .input_field .check
+{
+    width:15px;
+    height:15px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+.container .form .input_field .check input[type="checkbox"]
+{
+    position: absolute;
+    top:0;
+    left:0;
+    opacity:0;
+
+}
+
+.container .form .input_field .check .checkmark
+{
+    width:15px;
+    height:15px;
+    border: 1px solid #D071F9;
+    display: block;
+    position: relative;
+   
+}
+.container .form .input_field .check .checkmark::before
+{
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width:5px;
+    height:2px;
+    border:2px solid;
+    border-color: transparent transparent white white;
+    transform: rotate(-45deg);
+}
+.container .form .input_field .check input[type="checkbox"]:checked ~ .checkmark
+{
+    background: #D071F9;
+}
+.container .form .input_field .check input[type="checkbox"] ~ .checkmark::before
+{
+    display: block;
+}
+
+.container .form .input_field .btn
+{
+    width:100%;
+    padding:8px 10px;
+    font-size: 15px;
+    border: 0;
+    background: #D071F9;
+    color:white;
+    cursor: pointer;
+    border-radius: 3px;
+    outline:none
+}
+
+.container .form .input_field:last-child
+{
+    margin-bottom: 0;
+}
+.container .form .input_field .btn:hover
+{
+    background: purple;
+}
+.error input
+{
+    border:3px solid red;
+}
+  .success input
+{
+     border: 3px solid green;
+}
+.input_field i
+{
+    position: absolute;
+    right:10px;
+    top:35px;
+    visibility: hidden;
+  }
+.success i.fa-check-circle
+  {
+    visibility: visible;
+    color:green;
+  }
+  .error i.fa-exclamation-circle
+  {
+    visibility: visible;
+    color: red;
+  }
+  .input_field p
+  {
+    color: red;
+    font-size: 15px;
+    visibility: visible;
+  }
+  .error p
+  {
+    visibility: visible;
+  }
+  
+@media (max-width:420px)
+{
+      .container .form .input_field
+      {
+         flex-direction: column;
+         align-items: flex-start;
+      }
+      .container .form .input_field label
+      {
+          margin-bottom: 5px;
+
+      }
+      .container .form .input_field .terms
+      {
+        flex-direction: row;
+        
+      }
+}

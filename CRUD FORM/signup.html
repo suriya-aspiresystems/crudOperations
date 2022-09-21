@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to Signup page</title>
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  </head>
+  <body>
+    <form id="create-account-form" action="index.html" method="GET">
+       <div class="title">
+         <h2>Create Account</h2>
+       </div>
+        <!-- username -->
+        <div class="input-group">
+           <label for="username">Name</label>
+           <input type="text" name="username" value="" id="username" placeholder="Name">
+           <i class="fas fa-check-circle"></i>
+           <i class="fas fa-exclamation-circle"></i>
+           <p>Error Message</p>
+        </div>
+        <!-- email -->
+        <div class="input-group">
+           <label for="email">Email</label>
+           <input type="email" name="email" value="" id="email" placeholder="email">
+           <i class="fas fa-check-circle"></i>
+           <i class="fas fa-exclamation-circle"></i>
+           <p>Error Message</p>
+        </div>
+        <!-- password -->
+        <div class="input-group">
+           <label for="password">Password</label>
+           <input type="password" name="password" value="" id="password" placeholder="Password">
+           <i class="fas fa-check-circle"></i>
+           <i class="fas fa-exclamation-circle"></i>
+           <p>Error Message</p>
+        </div>
+        <!-- confirm password -->
+        <div class="input-group">
+           <label for="confirm-password">Confirm Password</label>
+           <input type="password" name="confirm-password" value="" id="confirm-password" placeholder="Confirm Password">
+           <i class="fas fa-check-circle"></i>
+           <i class="fas fa-exclamation-circle"></i>
+           <p>Error Message</p>
+        </div>
+        <button type="submit" name="button" class="btn" onclick="validateForm()">Register</button>
+    </form>
+    <script type="text/javascript" src="validation.js">
+
+    </script>
+  </body>
+</html>
+
+<!--
+  <i class="fas fa-check-circle"></i>
+  <i class="fas fa-exclamation-circle"></i>
+ -->
